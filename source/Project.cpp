@@ -38,7 +38,7 @@ void registration(Login &log) {
         goto start;
     }
 
-    ofstream outfile("Login.txt", ios::app);
+    ofstream outfile("data/login.txt", ios::app);
     if (!outfile) {
         cout << "\tError: File can't open" << endl;
     } else {
@@ -57,7 +57,7 @@ void login() {
     cout << "\tEnter Password: ";
     cin >> pw;
 
-    ifstream infile("Login.txt");
+    ifstream infile("data/login.txt");
     if (!infile) {
         cout << "\tError opening file" << endl;
         return;
@@ -95,7 +95,7 @@ public:
 
 // Check room availability in availability.txt
 bool checkRoomAvailability(string roomType, string date, int hours) {
-    ifstream infile("availability.txt");
+    ifstream infile("data/availability.txt");
     string line;
     while (getline(infile, line)) {
         stringstream ss(line);
@@ -156,7 +156,7 @@ void bookRoom() {
         cout << "Payment successful!" << endl;
 
         // Save booking details in customer.txt
-        ofstream outfile("customer.txt", ios::app);
+        ofstream outfile("data/customer.txt", ios::app);
         if (outfile.is_open()) {
             outfile << "Room Type: " << roomType << ", Date: " << date << ", Hours: " << hours
                     << ", Total Bill: $" << totalBill << endl;
@@ -164,7 +164,7 @@ void bookRoom() {
         }
 
         // Update availability.txt
-        ofstream availFile("availability.txt", ios::app);
+        ofstream availFile("data/availability.txt", ios::app);
         if (availFile.is_open()) {
             availFile << roomType << " " << date << " " << hours << endl;
             availFile.close();
