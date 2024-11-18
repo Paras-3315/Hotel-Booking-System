@@ -1,3 +1,0 @@
-Room101: available
-Room102: not available
-Room103: available
