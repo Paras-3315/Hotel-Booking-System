@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    ifstream loginFile("data/login.txt");
+    ifstream loginFile("login.txt");
     if (!loginFile) {
         cerr << "Error: Could not open login.txt" << endl;
         return 1;
