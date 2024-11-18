@@ -1,0 +1,2 @@
+Room Type: Single, Date: 2024-11-19, Hours: 10, Total Bill: $500
+Room Type: Double, Date: 2024-11-19, Hours: 10, Total Bill: $800
