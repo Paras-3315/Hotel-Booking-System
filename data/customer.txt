@@ -1,0 +1,2 @@
+customer1, Room101, 2 nights
+customer2, Room102, 3 nights
